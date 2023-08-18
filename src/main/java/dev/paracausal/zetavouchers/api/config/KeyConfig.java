@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface KeyConfig {
 
+    boolean contains(String key);
+
     Object getObject(String key);
 
     String getString(String key);
