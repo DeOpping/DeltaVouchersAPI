@@ -15,4 +15,11 @@ public interface Actions {
      */
     boolean exists(String id);
 
+    /**
+     * Get an Action from the command line!
+     * @param commandLine String
+     * @return Action
+     */
+    Action fromCommandLine(String commandLine);
+
 }
