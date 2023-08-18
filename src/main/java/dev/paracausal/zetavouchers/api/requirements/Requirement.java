@@ -28,12 +28,14 @@ public abstract class Requirement {
     public String key() { return key; }
 
     public void register() {
+        if (api == null) return;
         api.requirements().register(this);
     }
 
     public abstract boolean allowed(Player player, KeyConfig config);
 
     public void loadActions(KeyConfig config) {
+        if (api == null) return;
         final Actions actions = api.actions();
         config.getStringList("actions").forEach(string -> {
             final Action action = actions.fromCommandLine(string);
