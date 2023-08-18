@@ -31,6 +31,6 @@ public abstract class Action {
         return commandLine;
     }
 
-    public abstract boolean run(Player player, String commandLine);
+    public abstract void run(Player player, String commandLine);
 
 }
