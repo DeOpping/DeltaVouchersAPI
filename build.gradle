@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+
+group = 'dev.paracausal'
+version = '1.0.0'
+
+
+repositories {
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.8-R0.1-SNAPSHOT'
+}
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
