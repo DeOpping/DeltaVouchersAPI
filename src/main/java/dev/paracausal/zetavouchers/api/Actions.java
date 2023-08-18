@@ -8,11 +8,11 @@ public interface Actions {
      */
     void register(Action action);
 
-    /**
-     * Check if an existing action is already using the specified ID.
-     * @param id Action ID
-     * @return boolean
-     */
-    boolean exists(String id);
+//    /**
+//     * Check if an existing action is already using the specified ID.
+//     * @param id Action ID
+//     * @return boolean
+//     */
+//    boolean exists(String id);
 
 }
