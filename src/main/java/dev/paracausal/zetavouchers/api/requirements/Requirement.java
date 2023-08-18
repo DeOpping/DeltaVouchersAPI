@@ -1,8 +1,8 @@
 package dev.paracausal.zetavouchers.api.requirements;
 
 import dev.paracausal.zetavouchers.api.ZetaVouchersAPI;
+import dev.paracausal.zetavouchers.api.config.KeyConfig;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
@@ -23,6 +23,6 @@ public abstract class Requirement {
         api.requirements().register(this);
     }
 
-    public abstract boolean allowed(Player player, FileConfiguration config, String path);
+    public abstract boolean allowed(Player player, KeyConfig config);
 
 }
