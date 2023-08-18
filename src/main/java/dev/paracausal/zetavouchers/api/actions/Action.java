@@ -1,5 +1,6 @@
-package dev.paracausal.zetavouchers.api;
+package dev.paracausal.zetavouchers.api.actions;
 
+import dev.paracausal.zetavouchers.api.ZetaVouchersAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;

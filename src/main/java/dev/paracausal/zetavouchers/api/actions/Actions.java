@@ -1,4 +1,4 @@
-package dev.paracausal.zetavouchers.api;
+package dev.paracausal.zetavouchers.api.actions;
 
 public interface Actions {
 
