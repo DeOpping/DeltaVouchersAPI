@@ -58,6 +58,6 @@ public abstract class Requirement {
         for (int i = 0; i < size; i++) actions.get(i).run(player, commandLines.get(i));
     }
 
-    abstract Requirement newInstance();
+    public abstract Requirement newInstance();
 
 }
