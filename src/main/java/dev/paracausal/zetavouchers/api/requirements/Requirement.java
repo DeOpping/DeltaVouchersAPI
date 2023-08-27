@@ -15,9 +15,6 @@ public abstract class Requirement {
     private final String key;
     private final ZetaVouchersAPI api;
 
-    private final LinkedList<Action> actions = new LinkedList<>();
-    private final LinkedList<String> commandLines = new LinkedList<>();
-
     public Requirement(String key) {
         this.key = key;
         final Plugin pl = Bukkit.getPluginManager().getPlugin("ZetaVouchers");
@@ -35,18 +32,24 @@ public abstract class Requirement {
     public abstract boolean allowed(Player player, KeyConfig config);
 
     public void loadActions(KeyConfig config) {
+        clearActions();
         if (api == null) return;
         final Actions actions = api.actions();
         config.getStringList("actions").forEach(string -> {
             final Action action = actions.fromCommandLine(string);
             final String commandLine = action.replace(string);
-            this.actions.add(action);
-            this.commandLines.add(commandLine);
+            addAction(action);
+            addCommandLine(commandLine);
         });
     }
 
-    public LinkedList<Action> actions() { return actions; }
-    public LinkedList<String> commandLines() { return commandLines; }
+    public abstract void clearActions();
+
+    public abstract void addAction(Action action);
+    public abstract void addCommandLine(String commandLine);
+
+    public abstract LinkedList<Action> actions();
+    public abstract LinkedList<String> commandLines();
 
     public void executeActions(Player player) {
         final LinkedList<Action> actions = actions();
