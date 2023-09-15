@@ -1,5 +1,5 @@
-# ZetaVouchersAPI
-The API for ZetaVouchers.
+# DeltaVouchersAPI
+The API for DeltaVouchers.
 
 ## Using The API In Your Plugin
 Latest Release:<br>
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'dev.paracausal:ZetaVouchersAPI:{release}'
+    compileOnly 'dev.paracausal:DeltaVouchersAPI:{release}'
 }
 ```
 Replace `{release}` with the latest release shown above.

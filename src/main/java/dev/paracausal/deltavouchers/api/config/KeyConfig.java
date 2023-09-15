@@ -1,4 +1,4 @@
-package dev.paracausal.zetavouchers.api.config;
+package dev.paracausal.deltavouchers.api.config;
 
 import java.util.List;
 

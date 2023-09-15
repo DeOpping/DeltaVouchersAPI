@@ -1,9 +1,9 @@
-package dev.paracausal.zetavouchers.api.requirements;
+package dev.paracausal.deltavouchers.api.requirements;
 
-import dev.paracausal.zetavouchers.api.ZetaVouchersAPI;
-import dev.paracausal.zetavouchers.api.actions.Action;
-import dev.paracausal.zetavouchers.api.actions.Actions;
-import dev.paracausal.zetavouchers.api.config.KeyConfig;
+import dev.paracausal.deltavouchers.api.actions.Actions;
+import dev.paracausal.deltavouchers.api.DeltaVouchersAPI;
+import dev.paracausal.deltavouchers.api.actions.Action;
+import dev.paracausal.deltavouchers.api.config.KeyConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -13,12 +13,12 @@ import java.util.LinkedList;
 public abstract class Requirement {
 
     private final String key;
-    private final ZetaVouchersAPI api;
+    private final DeltaVouchersAPI api;
 
     public Requirement(String key) {
         this.key = key;
-        final Plugin pl = Bukkit.getPluginManager().getPlugin("ZetaVouchers");
-        if (pl != null) api = (ZetaVouchersAPI) pl;
+        final Plugin pl = Bukkit.getPluginManager().getPlugin("DeltaVouchers");
+        if (pl != null) api = (DeltaVouchersAPI) pl;
         else api = null;
     }
 

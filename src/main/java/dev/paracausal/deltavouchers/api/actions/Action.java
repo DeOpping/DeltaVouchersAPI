@@ -1,6 +1,6 @@
-package dev.paracausal.zetavouchers.api.actions;
+package dev.paracausal.deltavouchers.api.actions;
 
-import dev.paracausal.zetavouchers.api.ZetaVouchersAPI;
+import dev.paracausal.deltavouchers.api.DeltaVouchersAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -16,9 +16,9 @@ public abstract class Action {
     public String id() { return id; }
 
     public void register() {
-        final Plugin pl = Bukkit.getPluginManager().getPlugin("ZetaVouchers");
+        final Plugin pl = Bukkit.getPluginManager().getPlugin("DeltaVouchers");
         if (pl == null) return;
-        final ZetaVouchersAPI api = (ZetaVouchersAPI) pl;
+        final DeltaVouchersAPI api = (DeltaVouchersAPI) pl;
         api.actions().register(this);
     }
 

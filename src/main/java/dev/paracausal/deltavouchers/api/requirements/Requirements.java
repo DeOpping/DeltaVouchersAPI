@@ -1,4 +1,4 @@
-package dev.paracausal.zetavouchers.api.requirements;
+package dev.paracausal.deltavouchers.api.requirements;
 
 public interface Requirements {
 
