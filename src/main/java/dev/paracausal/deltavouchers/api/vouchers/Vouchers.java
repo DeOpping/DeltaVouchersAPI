@@ -16,4 +16,7 @@ public interface Vouchers {
 
     String voucherIDFromItem(ItemStack item);
 
+    Voucher voucherFromItem(ItemStack item);
+    Voucher voucherFromID(String id);
+
 }
