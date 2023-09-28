@@ -3,7 +3,7 @@ The API for DeltaVouchers.
 
 ## Using The API In Your Plugin
 Latest Release:<br>
-![Release](https://jitpack.io/v/dev.paracausal/ZetaVouchersAPI.svg)
+![Release](https://jitpack.io/v/dev.paracausal/DeltaVouchersAPI.svg)
 
 <br>
 build.gradle
