@@ -1,27 +1,25 @@
-package dev.paracausal.deltavouchers.api.events;
+package dev.fabled.deltavouchers.api.events;
 
+import dev.fabled.deltavouchers.api.vouchers.Voucher;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
-import org.bukkit.inventory.ItemStack;
 
-public class OldVoucherPurgeEvent extends Event implements Cancellable {
+public class PlayerRedeemVoucherEvent extends Event implements Cancellable {
 
     private final Player player;
-    private final String voucherID;
-    private final ItemStack purged;
+    private final Voucher voucher;
     private boolean canceled = false;
 
     /**
-     * Called when a player redeems an old voucher and it is purged
+     * Called when a player redeems a voucher successfully
      * @param player Player
-     * @param voucherID Voucher ID
+     * @param voucher Voucher
      */
-    public OldVoucherPurgeEvent(final Player player, final String voucherID, final ItemStack purged) {
+    public PlayerRedeemVoucherEvent(final Player player, final Voucher voucher) {
         this.player = player;
-        this.voucherID = voucherID;
-        this.purged = purged;
+        this.voucher = voucher;
     }
 
     /**
@@ -31,16 +29,10 @@ public class OldVoucherPurgeEvent extends Event implements Cancellable {
     public Player getPlayer() { return player; }
 
     /**
-     * The Voucher ID that is to be purged
+     * The voucher that is to be redeemed
      * @return String
      */
-    public String getVoucherID() { return voucherID; }
-
-    /**
-     * Get the ItemStack that will be purged
-     * @return ItemStack
-     */
-    public ItemStack getPurged() { return purged; }
+    public Voucher getVoucher() { return voucher; }
 
     @Override public void setCancelled(boolean cancel) { canceled = cancel; }
     @Override public boolean isCancelled() {return canceled; }

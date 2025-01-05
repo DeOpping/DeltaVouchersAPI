@@ -1,8 +1,8 @@
-package dev.paracausal.deltavouchers.api;
+package dev.fabled.deltavouchers.api;
 
-import dev.paracausal.deltavouchers.api.actions.Actions;
-import dev.paracausal.deltavouchers.api.vouchers.Vouchers;
-import dev.paracausal.deltavouchers.api.requirements.Requirements;
+import dev.fabled.deltavouchers.api.actions.Actions;
+import dev.fabled.deltavouchers.api.vouchers.Vouchers;
+import dev.fabled.deltavouchers.api.requirements.Requirements;
 
 public interface DeltaVouchersAPI {
 

@@ -1,6 +1,6 @@
-package dev.paracausal.deltavouchers.api.actions;
+package dev.fabled.deltavouchers.api.actions;
 
-import dev.paracausal.deltavouchers.api.DeltaVouchersAPI;
+import dev.fabled.deltavouchers.api.DeltaVouchersAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;

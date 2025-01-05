@@ -1,4 +1,4 @@
-package dev.paracausal.deltavouchers.api.config;
+package dev.fabled.deltavouchers.api.config;
 
 import java.util.List;
 

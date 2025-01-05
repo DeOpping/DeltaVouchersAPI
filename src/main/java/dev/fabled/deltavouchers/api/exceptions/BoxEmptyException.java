@@ -1,4 +1,4 @@
-package dev.paracausal.deltavouchers.api.exceptions;
+package dev.fabled.deltavouchers.api.exceptions;
 
 /**
  * Thrown when a player's box is empty

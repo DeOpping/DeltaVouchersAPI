@@ -1,45 +1,39 @@
-package dev.paracausal.deltavouchers.api.events;
+package dev.fabled.deltavouchers.api.events;
 
-import dev.paracausal.deltavouchers.api.vouchers.Voucher;
-import org.bukkit.entity.Player;
+import dev.fabled.deltavouchers.api.vouchers.Voucher;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-import java.util.ArrayList;
-import java.util.List;
+public class VoucherGiveEvent extends Event implements Cancellable {
 
-public class VoucherGiveAllEvent extends Event implements Cancellable {
-
-    private final List<Player> skippedPlayers;
+    private final OfflinePlayer player;
     private Voucher voucher;
     private int amount;
     private boolean canceled = false;
 
     /**
-     * Called when all online players are given a voucher
+     * Called when a player is given a voucher
+     * @param player Player
      * @param voucher Voucher
-     * @param amount int
+     * @param amount Amount
      */
-    public VoucherGiveAllEvent(final Voucher voucher, final int amount) {
-        this.skippedPlayers = new ArrayList<>();
+    public VoucherGiveEvent(final OfflinePlayer player, final Voucher voucher, final int amount) {
+        this.player = player;
         this.voucher = voucher;
         this.amount = amount;
     }
 
     /**
-     * Skip giving this player a voucher
-     * @param player Player
+     * The player who was given the voucher
+     * @return OfflinePlayer
      */
-    public void skipPlayer(Player player) {
-        if (!skippedPlayers.contains(player)) skippedPlayers.add(player);
-    }
-
-    public List<Player> getSkippedPlayers() { return skippedPlayers; }
+    public OfflinePlayer getPlayer() { return player; }
 
     /**
      * The voucher that is to be given
-     * @return Voucher
+     * @return String
      */
     public Voucher getVoucher() { return voucher; }
 
@@ -50,14 +44,14 @@ public class VoucherGiveAllEvent extends Event implements Cancellable {
     public void setVoucher(Voucher voucher) { this.voucher = voucher; }
 
     /**
-     * Get the amount of the voucher to be given
+     * Get the amount of vouchers to be given
      * @return int
      */
     public int getAmount() { return amount; }
 
     /**
      * Set the amount of vouchers to be given
-     * @param amount
+     * @param amount int
      */
     public void setAmount(int amount) { this.amount = amount; }
 

@@ -1,6 +1,6 @@
-package dev.paracausal.deltavouchers.api.events;
+package dev.fabled.deltavouchers.api.events;
 
-import dev.paracausal.deltavouchers.api.vouchers.Voucher;
+import dev.fabled.deltavouchers.api.vouchers.Voucher;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;

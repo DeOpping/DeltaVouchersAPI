@@ -1,4 +1,4 @@
-package dev.paracausal.deltavouchers.api.requirements;
+package dev.fabled.deltavouchers.api.requirements;
 
 public interface Requirements {
 

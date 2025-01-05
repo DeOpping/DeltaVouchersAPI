@@ -1,4 +1,4 @@
-package dev.paracausal.deltavouchers.api.actions;
+package dev.fabled.deltavouchers.api.actions;
 
 public interface Actions {
 

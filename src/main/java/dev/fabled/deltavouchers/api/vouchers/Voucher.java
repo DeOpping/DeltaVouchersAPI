@@ -1,6 +1,6 @@
-package dev.paracausal.deltavouchers.api.vouchers;
+package dev.fabled.deltavouchers.api.vouchers;
 
-import dev.paracausal.deltavouchers.api.exceptions.InvalidPlayerException;
+import dev.fabled.deltavouchers.api.exceptions.InvalidPlayerException;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;

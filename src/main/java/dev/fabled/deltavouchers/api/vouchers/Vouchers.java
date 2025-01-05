@@ -1,4 +1,4 @@
-package dev.paracausal.deltavouchers.api.vouchers;
+package dev.fabled.deltavouchers.api.vouchers;
 
 import org.bukkit.inventory.ItemStack;
 
