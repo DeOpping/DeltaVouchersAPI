@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'dev.paracausal:DeltaVouchersAPI:{release}'
+    compileOnly 'dev.fabled:DeltaVouchersAPI:{release}'
 }
 ```
 Replace `{release}` with the latest release shown above.
