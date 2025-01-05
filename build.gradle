@@ -4,8 +4,6 @@ plugins {
 }
 
 
-group = 'dev.paracausal'
-version = '1.0.1'
 group = 'dev.fabled'
 
 
